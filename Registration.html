@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <meta name="viewport">
+
+    <title>Booking - BIT E - BOOKING PORTAL</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body style="font-family: Poppins;">
+    <div>
+        <nav>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABJlBMVEX///80NoEAAACDcUHPz880NoP///3z8/OFcEH6+vrw8PCrq6vs7Oz8/Pz19fXl5eXf39/BwcFtbW06OjqPj49DQ0MiIiKBgYFPT08WFhbJycnV1dWxsbG4uLgxMTFVVVVgYGAfHx95eXmXl5eRkZFJSUllZWWioqKHh4csLn4qKip9fX2Mek5zc3M7OzsODg4lJ3t7aDEcHXdVVo7e3+bBwdKlpcAhJHpDRIe3t8jKy9p8bDR5eqSdm7vS09/q6N3c2sZ3Yi3CuaWsoINrbZmPk7RfXo+Dia5ITIcTGXJVU5UkKHV4eKBqbJsyMYdCQIGbjGvj39Ozqo7Oybmdkm6QhlWpnIL39us8QYnSyL3k4dGlm3aEeUOOgVlzXx3AtaSsoYoGCnU8MyI7AAAXkElEQVR4nO1diV8aSRZuSmhspBuQQw4BEZHDA1AUlahJPDMxJtHMmJmM2dn//5/Y915VNd1Ng+IomP31txOFpq6v6l31qnAVxYMHDx48ePDgwYMHDx48ePDgwYMHDx48ePDgwYMHDx48ePDgwcOvB1VV7W8V+4NfHcFOp3O0s797eAY43N0/6HRC0x7Tc0HrHBy+Od/z1buAlkS3Fdg7v9o9ikCJX3opO/tXl/WtVj0A8NkBT+qtrm/7Yic87VE+BaBkinZwcVkHcpwN/bTyE7/r9db3893OL6iUB298IIkBc734z0A9gOvpsy0pkGxdAslfCZ0zX7fe5wCsWt2tDx98e79tA/bqHz6A5Pap44tW93xH+UVWUt//7UPLQg8G39o+2z+y2s7wwf7F5UeYBbMcvOh+PHz9KqkqoV1fN2CSC4AIXh4e6K6FjYOzz62WRT0Dra2L1y6snYuPLV9/xPXW5SEOWR0qfUdAsm6xsPUPV6+Xo6qEz6zaB8t3evCwXmk75y1bra03ndfoImGRgoe+lsUd1FtXR4/x5rC+R6f2dayfBScw5DGhavt7LasP2DrvjLEQR5+6Vo6tvf1XtYo4mIPtbkAGLgEc4o76eFGDZVR3LrvkJvkc1VufXpc6Rt5YxAxG2b0YX8yMQx7ccYqB68DuK9LG3YDVVPjqewdPGJyqHG13LeGc7+P5a1nG0HnXFlV33wSfOPnaxZa1peuPO8870icBZr5usRGgSlu7T29L2bVP1tbZK5DU/a1r65iu60f/ojFV2flopRjYOjeebaRPHNG+bdIDdd8I3QHrevyghT2wUgz4WpdTDlV3Wjapuv48MjVx/OXn/deHmtzf8tnm7PMU7Q3qoH0FPw+fcFi8973ezEz75qH8zGHX2qZvqhQ7n62BCGBUGPP1S3sG0Z55P1pQ1dOWrdH65dQoBrftBD+OMDJ3N7OzszMc7fvbkRyNS1u7gfr2U93Pv4OqvrHPdXd/eOG3922T4Ex7/c/RIz6yGVTYNp4+89gfCbvvCrTeDDGTqqLdEDvgCL97vZs75YFNh6Np39bhSxB4CEc2m+cLgJUZMuq361ID19vt9vpbenh88p+7oW3rn+zyH+j+Gy/7RKif7QnQITKqKnc/kN9sr33zl6rd3d5SRgPU0uTqhk7dlnuE+dNehMUonHVtBOufhiQqbmd6XPfQEarmQ1BLIH0yZBlV5eyjzzaDrbMXYTEUqtr54DAG7mJ0940WcNbG5RjNziyX29shPQT36nYZ+RB5fhoj4XAUdVdrx308MGzf9tdPvWn3yOogeu++DVlGeziIQvJCTIbgYMuuJq5LePytLdzDsXiiktlB+bw/+cHZ9zAAcBFwba8+0MUkveK2vfv69mDn6vu2dIDr5grencACzrZ/IOW/enwd29+OXWqr4DFsDK8n6hSPHCLUGtwT3v1uEoRYVFKAZW23ZfR9Lz7++c1tcYIOYx34OLngTVWuHGagPhhxa++5ESU9fPdNyqly+/eNxo8nvvI1bM8OiVPP7CGTrzVBt9/xOQieD5ZRleMf5irO9mS4rSoG/wVWSMrosF6c03jpfjjwEth3zq5L4gKX6U+wKpJj+8tX/lglpfx63+Z25nb4nhjstU0TR0X2z4xTx6Zp0JJqfGHu3luUEX1i3+DMItp/cF9xd+PWzW4rMCWvH/5uJ+irG85lOG7f6ETn+IuFI4kqCii8xDBg5i03sn/OtN36OXIwdFOGl8FR18Fwb0DQjmdo+ACVIjRz3wQP/xI7qXcnGGuqaF97PdeOHOoe+D6pnM1uayDcGGTIbQhq3d3JO8s6fgH7gzFbb+Yrv1RDguzO8JPD1gwJDZ8bqnLh7HhQP47JjJAfBBYYiEqKPIybbf/DJ0XsrNwZOqeyNWKP/aw4rT+4cSKGszPtv//kVpU7R0ET+KHTh8fBE0HdneGBMzadlEc8d5hSF4Z3gkxPuru7k56Mts1QVL3tSfF1Z9hxMrx4UV4mtG3nGg4eL9z1pbL93uDOUeyZeuQZ1X7yjeDWkWpsORi+eXFyhPEYgq9f55vAu/c9ZCiCtLubvm4OY6g613ByDO1S2hrOsDeDlrP95ZhW7fjbO5JakNHbe25SRzFUFIeluZ4MQ3VAD11MnGC4/pXnSXszmF9DYjxIO+Yuo23q4eMYTiyouXIyHAxLg3zc9yo6eNxDgKiaASjENOQaezfh4/tRUjrA8MkHd2NiYFszOLUGl9F7NDEauYSeCL0xO8xzUxgQKLftMfSwe/CivPrYcURtLkkaY52MzD1PwIn4GwIAeH/D3/R4Zv/rO5LnddeOQvZjqEB9QntgteO4Kxq4HCijrXM7+hd/+1UkpN6Chv7k6ZmvXGaP2yMYdrp2hpfapDI12/b7sAHfQMeS4brY3t4ikdn2fxT17h198E0UPOYr6s5wx3GUOCFnoQxs3AKtIydFfV36+xPiePfOznDmD17j7svMCIaHdnXo7kzscqYzvzDoLlTBED0COopjzvA9WA/O8ItKzkM6C3eGdrcUGH3A/LxwHJwMio9kiIFae+b27qbnYPg77A3VEzOscWWoOTbAE4pKcfiqI+gfPDeRDN9/6/WQI4/XiKEwpccyVTOc4YHNKwVak8wmKueODIrTUQmG65pyi9kofnI4Y2E48+Wkn20cwvDCJinuBwcvhoOu7fsF9SvHLl8yBBU0bmZ7YmfYA4aKhVevvd4bzjBoSWJAX1sTPs0/taX1A9+dRsBkyANukb+/tTKEveNX7bY3lKH1bCYQaE1OCxGqag83BiNGEW/yQA22urSNwCMohR/IIL+/MInzN727H+xDt23S6r6BfN6LQh242HPpsDXi2IkcO4VqJkOpeW9ps2Gs0wcu+dJ9m9P9MKmQ1AL7TQynSwx9+0kbepHE4KELSamwsvy5qt1DqZ8nunOBVM125aQ7WRmlEaAUWRdxzylFPIvWfkdJtTu5hoJh7x9hmoAhHoAPBiu71gmsb0+C0wDCthtRAydDKk9t40n2nfHHrMnwd2IoxVL90j96s6Jjm77h9zxeEqr9CAq3NgN54R90gNZuvxPnTG8lw/Y/spUT16t8ej9gC8D/pvb1hKOA5W5p/dxlFG8tcQvw+tNcw3/453iH3W3wu13L1PmmcJlG4sgqqN3DgZtOdArTd/G0huRH2idmAZcTbggo+s1ef58iQVAXq8XbcrHoqnL8h0mRvAX3lCcjW/X1W8WbiZMQ0aFfXOpst/rfswi4BlaqFFW6dKJ8o/jmx4jOgpZpa527nzepqrb7vNekIkOaU42rrf73QPbcvmZhiqqFYXsEQ/3cdBSBrQtt2Nzu/vfiOTfEnc9XQz/b715LjtfbQzIpd7QVhL0FMCQPMuIy9KmZQ7wecdjUCQS6z5dcVI3t+tDmVCV6WZdyWj8fJjqwG5yVDNs3w68lKldmwF3/PPymF7mTrad8c8UV6qcWCMyOW2skKNq5udNobQ/7+oD6fvYnSumPkbfZ1dN+OGpdQadX2aWv13x8Loa7W7g8XXc7gv/1U1OB+uXQbIrxBzL8Z9hlPYR2bvkC3PXp0dHBwQ5gH7G7u3t4eHh2dgHgqrq1+zyaqMI+gjptnVEnZwTs5+Lq6s2bqzcX5xb3FfB97gzpF2JZ/mtoTx37DW/6IwVd218qaNU5sKfWc13mg/FetMgZ8B6olxb9V+/3Z4lBhtkHTnzEtB8EHCci3Ae5/LkCev6MFxdUbft6sIuhwC/nPUF61N2uC8GhnTzzKUbnu8ssDkf9cvzew6fOSywPTOPh84Y6Bzx0CTj/IIJFhqzSFNi6GmvDA7ruc1/AgB3m89bp895yA3OJ1sbak8nWBGpkgCvmdb1b3x3je6SdT//t8j95In5y8wL/uhZsWbD97FtG9az+kSjQDH4n7AF+Q2wLnCM+ffp0Srh47DfrVB1M9K6JfYEdiQPCEaFz1CG8wNdo1GAoFApKGEFDQDM0EzqBvLM6xt+dGd+rqWN8j9qDBw+vE2hTQkHN4nBCIWEXdfOVEQphAS0U0mQZGXP3C2EpeKMpziL9knq/ZN/2yoLWCobZk6VTOQy3xkcgyQiFsuwyylhaNMNYhvu5Zcb88CvGWJF/VGBM9JVlbFXUXOJNJas0ohRj9p4SjFXFy6rZBzXQoAqMd6KIylnxsszYSr/aBn/FnI2PQJGxVCMDNSqCYg1e891oEF4l6NUCYznOkMXkvIj68/DMMF+mGiV4n8YHcccg9Eaf1pzZh6KswZxIhjXxLGphC5OZ1PvV/IJh6tEM0zD4YMRfkROswUBY2WTIooKhWEPRclKuYQgnZ9FkmAuGc0Ve38nQb7bGh8r7ULSShWFByGO5zxDJ0vSKahX9CQxxY5JjbJneZ1l8kyX7DJccDPnITIaLrNKQojvPmwrxtXIyXGZLJq3+UFFI+wwlrUb/ZQ2r1frV2NwTGUYYW6D3G6y6IOYaGGaaJJZ9KU1x8TIZLrH8KmMhyTDCu68MMtRBsxqCCx8qX88FG0M+y1ELWagWZwVDVmuwUuhpDOdEkxr0nBXqBwxX18gM9BlWC2zewhAmJrwoBVwwjHB75GCYZ3GYPUGLGHL70bQxbNBclfsMsyyDliErq5ULtBJjMsxnYxtylHm2qYRLrCQZhpooWRaGfupOMqwCGWBUkAxhgJEkV0wHwyIwikl5g6FWuNJlWalhMkzFuSFLsbhkOM/WUIOXZbXFPM3SmAwJwpAv4fKt8vaDqIVlXGMLQyixqUuGegXrJYV0AsNkOi51187QwBZgurhjgKEmCtTkAlsomAwrCRKQKMuU+yKVVYyS8FpzqIVp1PIxGTYKqNnJECeVj0SqXCmJoV6AH1aGEfwhGILCZCORmrAg82KyuPjZGc6xVCQSKYqB42Ks0XpCAymT4WaUVKbMFqqiIKwYVFsVTooYgk3Mj8sQ56fKzUOVSUiGaOz8NdOWVnEAzXCFM0zI0hnBcK6G/bswLMiSy3KoOdbU0XJrGZNhHEaziJbUL9dQShitLWeI0/0US4NWwI+NNzMA7tk5Q5DZgo2hVmDLaWKol8zifkV4CymydoawOFgSzYrGh1qFAllw91Ubwyr0CIukCIYRZnYQMhkGSww+Lo3NsIy1o0IcahSKCYZh6MbKEH81iaFf+OJVLtVkSyNcGBwMV/gbPc47IIZlWE8wG4aVIfQVBCGVDKvCoFW48eIMuSUem6GeRp1OsCapNMYfumTYN96CITKirpdFEBLjYsq9hYwjbQxTInhd4FEsMUQlBlJBK0Noei4JfQmGmyLOW+EjEQyR8HgM/ZFIFmxAQwfnRJQohlw0GWIcbGMY5Qx1acXB4qELEf5wkxe2MvRL7fTzKJYYQtcF+GVnGGONJlMEw5xgRB2G+wxz4zLkSEXRqAgzsYCRl8kw22dYlnMKDPPmBmCVTIFgGOWO28pwjasfj3rnJMNFir+DTbYpGIJbNRrkMznDhIyW9CRVkAxxr/N4hkupBqBQLENbtVJKJM/9pUYpZDRT8/ztfCqDCpfNZLjbNCqNjK7MlzbFriKWacQNZS3VJCNTLmVALdONpuxDj6eWxEvoAl4uZjJoMgopEEIjnioSw0wDFThRakJX1VLGD962JCJeaDJVpGo8yDcajfijGYpEmnhtpj2DRlDHz8QQg0Gd/9LMWlBGfgwfUHEjqMvKCr4zGZr1qKT5wKDtsuyF/9ZpDBp2OFBNs/T/Cv+epIeXQyiiK1qYBCSMeh3O5/AlwsAnIXwFv/D+QigCRRE6L2Bmd/Rsnu9SDapHj2QT5hNNFNLCQdFZkNQ+KK5G5PJZXTHHgQjH8uapGrzO8dIGjfrxtzOWwCD6KbTNovdBA1fUcmReYxHYOlTI0ELMA3Yzw7RF+iTCC1hyKVAGB0Af0wZCNBEy4/oavcpjmWW0uBXsG93NBkUBWbNgVOxVQpT4WTL6r7G2nzUoCnk8w3mwy3x/4gfnoLFmDfYwkUqBNZL+CDxZA4qVeTDQfowutWyyweLJcI5l0pVkTjbBNlYqRHiRFdJJMulRaKKQ9IdYs1JJ5slNb6yk0d7nMQKK4iZynpzCGlYE11Msr1K0EOU5hlCKNWq1Em1/Qw2WWVhJCre7SP/GZQjzyBkWNAN9Xx5dX4QcIjk2wdBAL5XFFVo1W8hCKK5giAVjWbR0nccVCYuUyByLo+xlVw14XsOmOUOIM5ChwV1xLgNxoGC4zMPtJZyPZbaEa5Yv0xKnoriOYzJssIaBDMHXb5JTW8SNoivDGgpVjsXLKwkeYy+JOGEJiiyypXJCCO8iTlKYpRLlRA4CADNVmGfFuWqCM4wDW2SYF3nCKrznDMOZJqljiKWMUIlZ8qMbLCUjkzEYbiRYLYd89HmWyT2GYV8P44w7pzKsWV8PTYZcvVjGVJw8D6KIYT7FogvQzopY+yjIBmcYkQmuJItGKD7NIQyln1QYjyHsdMs8SKtRnuBBhpVsLMYndpPvTkB856DaQjYWtTEsxGKxiML6qwBruDhX5gz9MZZGI1YV8VgORFMyTHNTXYBNMIvrPJFDiZ6xtFAynKdUIfDRNFiLtUGGa8LSmAyXzBZqPHFlxKH7RTFSC0Ouh0vig7Bi08MsyFwTfmZFsTWowxlCcznOOY7rCOKysLbBGkEqFHsKQwxnYftZWACuG4MMV1BBMOyXDIuRaJQLHuY1gkp0CQu7MIxHo1EDjdlcUImswbCttjRLOWXKbc1HlNAK7iGiYAqiIUx8ZHU9m8EWQfjzhhLe4HO5NpYaUi/E0ChBp7gxoO2mkyF8UOAbXYseCuMBy1+CD+NhV4aIOfKZWAjq5FFGiOGq8BPQYLgEHXCytDkr046kATXWsC3Y7KTgdZrmdHk8hisVsM9JnJtsBaQnV2G0gYihVwvjE6VI21BM/NMMVpNALJouFotp4Q+VKJp9OtuJJfudx5IwUyEoV6yQSwenXaqBNmaT0EEkvcD7himr4EwZNdiGblDCFdpOo6bl0RWL9mJFPD7imllOZhUPHl4/xrhDtMR+TTz+Kl/U/2ticn/uzIMHD5OC5s9CVD/234a1VIiUHxeIRGuT/gu0hDxbThQra9WHS9pRknGdMpd8VDCpVTMs93CxZ4ef9roxcVCsPzruzYqDDUT+keFyYioMV3laJMFPLXJLj61XZBlz3xt7JMPyVBgm+R2KHDHU4vOPrBZha/3N1GMZVqfCMMGaKKYG9h3dZJvlKkYUi6vpVdpsVxMrZZiC/MqK/T7dcjWK1xo4gGFwLbnC3+pzq5UFHnf5N4rFqijkn08v1KbCMAi74nlh4sJ+Voziki5AaLhMCqpzK6Jl/LZaGtOVipk1jrFysZbmqqwvzSnRFIWWuLR5cX1uDsgtsqkwVEJ47JvgKTWD5zEVzJ9E+NiilAvMFe2Vqsu4z5d51RimPIMZ2k1XsQVKZigbLKLohQpvBSVifjoMYYCbsI0Xl8E4w7mYouVF5rCIZ6MbDkXDPLHekLf1uB5uUh5wM72wtrZKbP2wqLkUpaHWKB03HT1EaFXGM82SoWKUV2uCYQ7WIxy3n+mBq9jY2GjI26GcYRJvieisjOc94hbs4mqtQQwzxH46DEUusymuSnGG2eacHpLZ3zQLzdXslSr5SDQaybIGPwC1MdwwS4XTyyElTgz5hanpMNzgZq9GgxQMQ6iCYckwy2rFqK1OVBwtyJy/lWGmxG/owb80HldzhhkS6Ckx5K6+Ju6PriohjUc4OWDILX3FkiImLIsQLyay84Ih8V5gRZDoxQQuJx7lg5QaqIdoeqbDcJnuYPj5TQyj1KzOa5jVXFwpMhQyTsCeh45KCxMWt5B4JrVAFzTCTdZMFzIovg2WmFsqNdeyVLIWzTfYwhRyhcvZRKnEMjJ12Uzz0zS8KbgpiBgpW1ohVkwv0eFCbj5drICxyRfTxbnIQjq9RgfNRcaKJPq5DMSuCS7JEUzJrmSqU/5/JxuCannaI3hRwPIVprKrmxT8bKlSe7jYLwy/vAb//4vI/7WIevDgwYMHDx48ePDgwYMHDx48ePDgwYMHDx48ePDgwYMHDx48ePDwa+J/nKmfprXlHTAAAAAASUVORK5CYII="
+                width="90px" height="90px" style="margin: 0; padding: 0; border-radius: 50%;" />
+
+            <span class="heading"> BIT E - BOOKING
+                PORTAL</span>
+        </nav>
+        <div class="navbare">
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="location.html">Location</a>
+                <a href="Venues.html">Venues</a>
+                <a href="Registration.html" class="active" style="color: rgb(90, 24, 152);">Registration</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+            </nav>
+        </div>
+    </div>
+    <div>
+        <img src="https://www.collegesearch.in/upload/institute/images/large/161229090207_Sports_01.jpg" width="100%">
+    </div>
+    <div>
+        <div>
+            <nav class="row">
+
+
+                <div class="column">
+                    <select>
+                        <option>&nbsp;&nbsp;-- Location --</option>
+                        <option>&nbsp;&nbsp;IB Block</option>
+                        <option>&nbsp;&nbsp;AS Block</option>
+                        <option>&nbsp;&nbsp;School of Mechanical Science</option>
+                        <option>&nbsp;&nbsp;School of Computing</option>
+                        <option>&nbsp;&nbsp;Research Park</option>
+                    </select>
+                    <label>Location</label>
+                </div>
+                <div class="column">
+                    <select>
+                        <option>&nbsp;&nbsp;-- Venue type --</option>
+                        <option>&nbsp;&nbsp;Class Rooms</option>
+                        <option>&nbsp;&nbsp;Computer Centers</option>
+                        <option>&nbsp;&nbsp;Seminar Halls</option>
+                        <option>&nbsp;&nbsp;Smart Class Rooms</option>
+                        <option>&nbsp;&nbsp;Other Laboratories</option>
+
+                    </select>
+                    <label> Venue Type </label>
+                </div>
+
+                <div class="column">
+                    <input type="date"><br /><br />
+                    <label>Date</label>
+                </div>
+                <div class="column">
+                    <input type="time"><br /><br />
+                    <label>Timing</label>
+                </div>
+
+                <div class="column">
+                    <a href="Booking.html">
+                        <button class="bttn">CHECK AVAILABILITY</button>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div>
+
+        <div>
+            <h1 style="text-align: center;">Make Your Venue Registration Comfortable</h1><br>
+            <p class="para" style="text-align: center;">
+                Book hotel now book hotel now book hotel now book hotel
+                now book hotel now book hotel now book hotel now book hotel now book
+                hotel now book hotel now book hotel now book hotel now book hotel now
+                book hotel now. Book hotel now book hotel now book hotel now book hotel
+                now book hotel now book hotel now book hotel now book hotel now book
+                hotel now book hotel now book hotel now book hotel now book hotel now
+                book hotel now. Book hotel now book hotel now book hotel now book hotel
+                now book hotel now book hotel now book hotel now book hotel now book
+                hotel now book hotel now book hotel now book hotel now book hotel now
+                book hotel now. Book hotel now book hotel now book hotel now book hotel
+                now book hotel now book hotel now book hotel now book hotel now book
+                hotel now book hotel now book hotel now book hotel now book hotel now
+                book hotel now. Book hotel now book hotel now book hotel now book hotel
+                now book hotel now book hotel now book hotel now book hotel now book
+                hotel now book hotel now book hotel now book hotel now book hotel.
+            </p>
+            <br />
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer>
+        <a href="index.html" class="logo" style="text-decoration: none; color: white; font-size: 20px; ">BIT E - Booking
+            Portal |
+        </a>
+        <a href="https://www.bitsathy.ac.in/" aria-placeholder="bitsathy" style="color:white ;">Bitsathy.ac.in</a>
+    </footer>
+    <style>
+        body {
+            margin: 0;
+
+        }
+
+        .heading {
+            padding: 13px;
+            width: 100%;
+            height: 70px;
+            background-color: white;
+            font-weight: bold;
+            color: rgb(90, 24, 152);
+            font-size: 34px;
+
+
+        }
+
+        .navbare {
+            background-color: rgb(90, 24, 152)
+        }
+
+        /* .para {
+            height: 140px;
+            width: 100%;
+            text-align: center;
+            margin: 20px;
+        } */
+
+        /* .logo {
+            font-weight: bold;
+            color: rgb(240, 240, 240);
+            font-size: 30px;
+
+
+        } */
+
+        /* 
+        .navbar {
+            overflow: hidden;
+            background-color: rgb(90, 24, 152);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            font-weight: bold;
+        } */
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 19px 19px;
+            text-decoration: none;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .navbar a:hover {
+            background: white;
+            color: rgb(90, 24, 152);
+            border-radius: 10px;
+        }
+
+        .row {
+            background-color: rgb(90, 24, 152);
+            padding: 20px;
+        }
+
+
+
+
+        /* .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+            font-family: inherit;
+            font-size: 70px;
+        } */
+
+        .active {
+            background-color: white;
+            color: chocolate;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        /* * {
+            box-sizing: border-box;
+        } */
+
+        .column {
+            float: left;
+            width: 20%;
+            padding: 15px;
+        }
+
+        .column2 {
+            float: left;
+            width: 50%;
+            padding: 15px;
+        }
+
+        .column3 {
+            float: left;
+            width: 33.33%;
+            padding: 20px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+
+        label {
+            color: white;
+            font-weight: bold;
+        }
+
+        .bttn {
+            width: 240px;
+            height: 50px;
+            background-color: white;
+            font-size: 15px;
+            border: none;
+            font-weight: bold;
+            background-color: lightgreen;
+            border-style: solid;
+            border-color: lightgreen;
+            color: black;
+        }
+
+        .bttn:hover {
+            border: 1px solid green;
+            background: forestgreen;
+            color: white;
+        }
+
+        .navbar button:hover {
+            background: #ddd;
+            color: #f46f3a;
+            border-radius: 10px;
+        }
+
+        .inputcon {
+            width: 650px;
+            height: 50px;
+            padding: 15px;
+        }
+
+        input {
+            width: 240px;
+            height: 50px;
+            padding: 15px;
+            border-style: solid;
+            border-color: white;
+            font-size: 15px;
+
+        }
+
+        select {
+            margin-bottom: 15px;
+            width: 240px;
+            height: 50px;
+            font-size: 15px;
+            border-color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 17px;
+            background-color: rgb(90, 24, 152);
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</body>
+
+</html>
